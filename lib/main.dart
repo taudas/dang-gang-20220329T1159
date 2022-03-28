@@ -139,7 +139,7 @@ class AnimatedBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
       Track("color1").add(
-          const Duration(seconds: 3),
+          const Duration(seconds: 13),
           ColorTween(
               begin: const Color(0xff8a113a), end: Colors.lightBlue.shade900)),
       Track("color2").add(const Duration(seconds: 3),
