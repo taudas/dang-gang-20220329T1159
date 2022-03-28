@@ -172,7 +172,7 @@ class CenteredText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        "Dangling Ganglion",
+        "Hear is wear we listen to Dangling Ganglion",
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.w200),
         textScaleFactor: 4,
       ),
