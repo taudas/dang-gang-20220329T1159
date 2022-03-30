@@ -1,13 +1,18 @@
-import 'dart:math';
 
+
+import 'dart:math';
+import 'dart:html';
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:particle_background/simple_animations_package.dart';
+import 'package:flutter_html/flutter_html.dart';
 
-void main() => runApp(const ParticleApp());
+void main() => runApp(const DGApp());
 
-class ParticleApp extends StatelessWidget {
-  const ParticleApp({Key? key}) : super(key: key);
+class DGApp extends StatelessWidget {
+  const DGApp({Key? key}) : super(key: key);
 
+      
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -20,14 +25,21 @@ class ParticleApp extends StatelessWidget {
 
 class ParticleBackgroundPage extends StatelessWidget {
   const ParticleBackgroundPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+     var htmlData = '''
+<div style="position: relative; padding-top: 74.8936170212766%;">
+<iframe src="https://iframe.videodelivery.net/a146b36241effd7e32ee00306363ca60?autoplay=true&poster=https%3A%2F%2Fvideodelivery.net%2Fa146b36241effd7e32ee00306363ca60%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
+      ''';
     return Stack(
-      children: const [
+      children:  [
         Positioned.fill(child: AnimatedBackground()),
-        Positioned.fill(child: Particles(30)),
+        Positioned.fill(child: Particles(77)),
+        // Positioned.fill(child: CenteredText()),
+       Positioned.fill(child: Html(data: '''
+<iframe src="https://iframe.videodelivery.net/a146b36241effd7e32ee00306363ca60?autoplay=true"''')),
         Positioned.fill(child: CenteredText()),
+
       ],
     );
   }
@@ -117,7 +129,7 @@ class ParticlePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white.withAlpha(50);
+    final paint = Paint()..color = Colors.black.withAlpha(50);
 
     for (var particle in particles) {
       var progress = particle.animationProgress.progress(time);
@@ -139,10 +151,10 @@ class AnimatedBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
       Track("color1").add(
-          const Duration(seconds: 13),
+          const Duration(seconds: 133),
           ColorTween(
               begin: const Color(0xff8a113a), end: Colors.lightBlue.shade900)),
-      Track("color2").add(const Duration(seconds: 3),
+      Track("color2").add(const Duration(seconds: 33),
           ColorTween(begin: const Color(0xff440216), end: Colors.blue.shade600))
     ]);
 
@@ -163,6 +175,8 @@ class AnimatedBackground extends StatelessWidget {
   }
 }
 
+
+
 class CenteredText extends StatelessWidget {
   const CenteredText({
     Key? key,
@@ -172,8 +186,8 @@ class CenteredText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        "Hear is wear we listen to Dangling Ganglion",
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w200),
+        "Now we listen to Dangling Ganglion",
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.w200),
         textScaleFactor: 4,
       ),
     );
