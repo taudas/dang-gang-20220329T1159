@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0-alpha.2
+  flutter_widget_from_html: ^0.8.5
   flutter_lints: ^1.0.4
 flutter:
   assets:

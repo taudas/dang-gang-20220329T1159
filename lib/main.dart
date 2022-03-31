@@ -1,27 +1,26 @@
-
-
 import 'dart:math';
 import 'dart:html';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:particle_background/simple_animations_package.dart';
 import 'package:flutter_html/flutter_html.dart';
-
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 void main() => runApp(const DGApp());
 
 class DGApp extends StatelessWidget {
   const DGApp({Key? key}) : super(key: key);
 
-      
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         // body: ParticleBackgroundPage(),
-       body: Html(data: '''
+       // body: Html(data:
+       body: HtmlWidget(
+        '''
        <h1>text before player</h1>
-<iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
-</iframe><h1>text after player</h1>
+<div style="position: relative; padding-top: 99.36238044633369%;"><iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5?poster=https%3A%2F%2Fvideodelivery.net%2F74b65eef7194e394d4cc905997679ff5%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
+<h1>text after player</h1>
  '''
       ,
     )));
