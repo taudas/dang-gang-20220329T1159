@@ -19,8 +19,9 @@ class DGApp extends StatelessWidget {
       home: Scaffold(
         // body: ParticleBackgroundPage(),
        body: Html(data: '''
+       <h1>text before player</h1>
 <iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
-</iframe>
+</iframe><h1>text after player</h1>
  '''
       ,
     )));
