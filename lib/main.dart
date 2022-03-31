@@ -18,25 +18,11 @@ class DGApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         // body: ParticleBackgroundPage(),
-
-      body: Html(data: '''
-<h1>asdf</h1>
-      <iframe
-  src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5"
-  style="border: none"
-  height="720"
-  width="1280"
-  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-  allowfullscreen="true"
-></iframe>
-      
-      
-      <h1>foo-6</h1>
-
-    <h2>fff-6</h2>
-'''
+       body: Html(data: '''
+<iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+</iframe>
+ '''
       ,
-
     )));
   }
 }
@@ -45,18 +31,14 @@ class ParticleBackgroundPage extends StatelessWidget {
   const ParticleBackgroundPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-     var htmlData = '''
-<div style="position: relative; padding-top: 74.8936170212766%;">
-<iframe src="https://iframe.videodelivery.net/a146b36241effd7e32ee00306363ca60?autoplay=true&poster=https%3A%2F%2Fvideodelivery.net%2Fa146b36241effd7e32ee00306363ca60%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
-      ''';
     return Stack(
       children:  [
         Positioned.fill(child: AnimatedBackground()),
         Positioned.fill(child: Particles(77)),
         // Positioned.fill(child: CenteredText()),
        Positioned.fill(child: Html(data: '''
-<iframe src="https://iframe.videodelivery.net/a146b36241effd7e32ee00306363ca60?autoplay=true"''')),
-        Positioned.fill(child: CenteredText()),
+<div style="position: relative; padding-top: 99.36238044633369%;"><iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5?poster=https%3A%2F%2Fvideodelivery.net%2F74b65eef7194e394d4cc905997679ff5%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>''')),
+        // Positioned.fill(child: CenteredText()),
 
       ],
     );

@@ -65447,7 +65447,7 @@ $2(a,b){return B.i.aB(b,a)},
 $S:103}
 A.Dh.prototype={
 Z(a,b){var s=null
-return new A.vY(new A.xf(new A.v3(new A.bU(s,t.G),'      <h1>foo-6</h1><div style="position: relative; padding-top: 99.36238044633369%;"><iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5?autoplay=true&poster=https%3A%2F%2Fvideodelivery.net%2F74b65eef7194e394d4cc905997679ff5%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>\n\n    <h2>fff-6</h2>\n',s),s),s)}}
+return new A.vY(new A.xf(new A.v3(new A.bU(s,t.G),'<iframe src="https://iframe.videodelivery.net/74b65eef7194e394d4cc905997679ff5" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">\n</iframe>\n ',s),s),s)}}
 A.Sa.prototype={
 a3B(a,b){var s,r,q=t._m
 A.alK("absolute",A.a([b,null,null,null,null,null,null],q))
